@@ -1,0 +1,36 @@
+let zeroLines = [" _ ", "| |", "|_|"];
+let oneLines = ["   ", "|  ", "|  "];
+let twoLines = [" _ ", " _|", "|_ "];
+let threeLines = [" _ ", " _|", " _|"];
+let fourLines = ["   ", "|_|", "  |"];
+let fiveLines = [" _ ", "|_ ", " _|"];
+let sixLines = [" _ ", "|_ ", "|_|"];
+let sevenLines = [" _ ", "  |", "  |"];
+let eightLines = [" _ ", "|_|", "|_|"];
+let nineLines = [" _ ", "|_|", " _|"];
+
+let numberLines = [zeroLines, oneLines, twoLines, threeLines, fourLines, fiveLines, sixLines, sevenLines, eightLines, nineLines];
+
+function print(firstDigit){
+    
+    for(let j = 0; j<10; j++){
+        let teen = "";
+        let secondDigit = numberLines[j];
+        for(let i = 0; i < 3; i++){
+            teen += numberLines[firstDigit][i] + secondDigit[i];
+            teen += "\n";
+        }
+        console.log(teen);
+    }
+}
+
+console.log(print(0));
+console.log(print(1));
+console.log(print(2));
+console.log(print(3));
+console.log(print(4));
+console.log(print(5));
+console.log(print(6));
+console.log(print(7));
+console.log(print(8));
+console.log(print(9));
